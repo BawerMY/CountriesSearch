@@ -4,7 +4,7 @@ import Country from './components/Country';
 var $ = require('jquery-browserify')
 
 function App() {
-  var dark = false
+  // var dark = false
   const [page, setPage] = useState(null)
   return (
     <div className="min-h-screen min-w-screen">
@@ -31,11 +31,12 @@ function App() {
         for(var i = 0; i <all.length; i++) {
             if(all[i].name.common.toLowerCase().includes(input.toLowerCase())) results.push(all[i].name.common.toLowerCase())
             if(all[i].region.toLowerCase().includes(input.toLowerCase())) results.push(all[i].name.common.toLowerCase())
+            if(all[i].cca2.toLowerCase().includes(input.toLowerCase())) results.push(all[i].name.common.toLowerCase())
             // if(all[i].name.official.toLowerCase().includes(input.toLowerCase())) results.push()
             // if(all[i].capital.toLowerCase().includes(input.toLowerCase())) results.push(<a>Capital: {all[i].capital} id:{i}</a>)
         }
         var results2 = []
-        for(var i = 0; i <results.length; i++) {
+        for(i = 0; i <results.length; i++) {
           if(!results2.includes(results[i])) results2.push(results[i])
         }
         setRess(results2.map((result)=><div className='w-[10rem] p-1 border-2 border-black m-1' key={result} onClick={() => setPage(<Country name={result} />)}>{result}</div>))
