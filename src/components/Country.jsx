@@ -11,7 +11,7 @@ export default function Country(props) {
         
     <div className='flex flex-col'>
         <div className='flex flex-wrap'>
-            <img className='w-[30vw]' src={country.flags.svg} alt="" />
+            <img className='w-[30vw] border-[1px] border-black' src={country.flags.svg} alt="" />
             <span className='text-[30px] px-5 p-2 title'>{country.name.common}</span>
         </div>
         <div className='flex flex-col p-5 gap-2.5'>
