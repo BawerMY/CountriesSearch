@@ -1,3 +1,3 @@
 # Mini Countries Dictionary
-https://bawermy.github.io/Countries/
+https://bawermy.github.io/CountriesSearch/
 (powered by RESTcountries)
